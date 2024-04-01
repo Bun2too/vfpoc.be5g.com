@@ -16,6 +16,7 @@ export default {
     scopes: ['openid', 'profile', 'email', 'offline_access'],
     pkce: true,
     useInteractionCodeFlow: USE_INTERACTION_CODE_FLOW,
+    
     testing: {
       disableHttpsCheck: OKTA_TESTING_DISABLEHTTPSCHECK
     }
@@ -23,6 +24,14 @@ export default {
   resourceServer: {
     messagesUrl: 'http://localhost:8000/api/messages'
   },
+
+  // transformUsername: (username,operation) => {
+  //   debugger;
+  //   console.log(operation)
+  //   // This example will append the '@acme.com' domain if the user has
+  //   // not entered it
+  //   return  username + '@tbl';
+  // },
   app: {
     basename: BASENAME
   }
