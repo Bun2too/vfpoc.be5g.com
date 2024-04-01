@@ -51,6 +51,14 @@ export default {
           issuer,
           scopes,
         },
+        
+        transformUsername: (username,operation) => {
+          debugger;
+          console.log(operation)
+          // This example will append the '@acme.com' domain if the user has
+          // not entered it
+          return  username + '@tbl';
+        },
         useInteractionCodeFlow,
         state,
         otp
